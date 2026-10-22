@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#3F37C9">
+  <title>My Portfolio | Home</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a class="brand" href="#home" aria-label="Go to home">
+        <span class="brand-mark">lW</span>
+        <span>LIZZY'S PORTFOLIO</span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+      <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+        <a class="active" href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#resume">Resume</a>
+        <a href="#certificates">Certificates</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow"><span class="eyebrow-dot"></span> Welcome to my personal website</span>
+          <h1>Hello, I'm <span class="gradient-text">Wayco, Liz Antonette I.</span></h1>
+          <p class="hero-copy">An IT student who enjoys learning about technology, building useful skills, and exploring creative ways to solve problems. This portfolio shows a little about me and the certificates I have earned.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#certificates">Explore my certificates <span aria-hidden="true">↘</span></a>
+            <a class="btn btn-secondary" href="#about">More about me</a>
+          </div>
+          <div class="profile-note"><span aria-hidden="true">✦</span> Learning today, improving every day.</div>
+        </div>
+        <div>
+          <div class="profile-frame">
+
+              <img
+                src="images/Liz.jpg"
+                alt="My profile photo"
+                class="profile-photo"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="container about-grid">
+        <aside class="about-card">
+          <p class="section-kicker" style="color:#E9B5FF">A LITTLE INTRODUCTION</p>
+          <h3>Curious mind. Creative heart. Growing skills.</h3>
+          <p>I believe every new lesson and experience can help me become better. I am working toward a future where I can use technology and creativity to make useful things.</p>
+        </aside>
+        <div class="about-content">
+          <p class="section-kicker">About the owner</p>
+          <h2 class="section-title">A little more <span class="gradient-text">about me</span></h2>
+          <p>Hi! I'm <strong>Lizzy</strong>, an Information Technology student interested in technology, web design, and creative digital work. I enjoy learning new tools, improving my skills, and collecting certificates that show my progress.</p>
+          <p>My goal is to keep learning, gain real-world experience, and use what I know to create helpful and meaningful projects. This website is a place to introduce myself and organize my learning achievements.</p>
+          <div class="info-grid">
+            <div class="info-item"><strong>Education</strong><span>BS Information Technology</span></div>
+            <div class="info-item"><strong>Interests</strong><span>Web design & technology</span></div>
+            <div class="info-item"><strong>Current focus</strong><span>Learning and improving</span></div>
+            <div class="info-item"><strong>Career goal</strong><span>Build a career in IT</span></div>
+          </div>
+          <div class="skills" aria-label="Areas of interest">
+            <span class="skill">Web Design</span><span class="skill">IT Support</span><span class="skill">Digital Skills</span><span class="skill">Creative Editing</span><span class="skill">Continuous Learning</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="certificates" id="certificates">
+      <div class="container">
+        <div class="cert-header">
+          <div>
+            <p class="section-kicker">My learning achievements</p>
+            <h2 class="section-title">Certificates & <span class="gradient-text">training</span></h2>
+           <!--<p class="section-description">Browse certificates by provider or search by title, topic, or keyword. Matching certificates will be highlighted while other cards become less prominent.</p>--> 
+          </div>
+          <div class="cert-count"><span id="totalCount">19</span> certificates listed</div>
+        </div>
+
+        <div class="certificate-tools">
+          <label class="search-wrap">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8" stroke="currentColor" stroke-width="2"/><path d="m16 16 5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            <input class="search-input" id="certificateSearch" type="search" placeholder="Search certificates, skills, or providers..." aria-label="Search certificates">
+          </label>
+          <select class="category-select" id="categorySelect" aria-label="Filter by provider">
+            <option value="all">All providers</option>
+            <option value="TESDA">TESDA</option>
+            <option value="DICT">DICT</option>
+            <option value="FreeCodeCamp">freeCodeCamp</option>
+            <option value="Cisco Network Academy">Cisco Network Academy</option>
+            <option value="International">International</option>
+          </select>
+        </div>
+
+        <div class="category-pills" id="categoryPills">
+          <button class="category-pill active" data-category="all">All (19)</button>
+          <button class="category-pill" data-category="TESDA">TESDA (5)</button>
+          <button class="category-pill" data-category="DICT">DICT (5)</button>
+          <button class="category-pill" data-category="FreeCodeCamp">freeCodeCamp (1)</button>
+          <button class="category-pill" data-category="Cisco Network Academy">Cisco (2)</button>
+          <button class="category-pill" data-category="International">Local (2)</button>
+          <button class="category-pill" data-category="Other">Other (4)</button>
+        </div>
+
+        <div class="results-line">
+          <span id="resultsText" aria-live="polite">Showing all 15 certificates</span>
+          <span>Search results are highlighted</span>
+        </div>
+
+        <div class="certificate-grid" id="certificateGrid">
+          <!-- TESDA: Replace these sample titles with your actual certificate names. -->
+          <article class="certificate-card" data-category="TESDA" data-title="Computer System Servicing NC II" data-keywords="computer hardware software basic IT">
+            <div class="certificate-top">
+            <div class="certificate-icon tesda-icon">
+              <img src="images/tesda-logo.png" alt="TESDA logo">
+            </div>
+            <span class="certificate-category">TESDA</span></div>
+            <h3>Computer System Servicing NC II</h3><p>Installing and Configuring Computer Systems.</p>
+            <div class="certificate-footer"><small>Certificate 01 · TESDA</small>
+              <button class="view-btn"
+                      type="button"
+                      data-preview
+                      data-file="certificates/tesda1.pdf"
+                      data-title="Installing and Configuring Computer Systems">
+                View Certificate ↗
+              </button></div>
+          </article>
+
+          <article class="certificate-card" data-category="TESDA" data-title="Computer System Servicing NC II" data-keywords="CSS hardware installation troubleshooting">
+            <div class="certificate-top">
+            <div class="certificate-icon tesda-icon">
+              <img src="images/tesda-logo.png" alt="TESDA logo">
+            </div>
+            <span class="certificate-category">TESDA</span></div>
+            <h3>Computer System Servicing NC II</h3><p>Introduction to Computer Systems Servicing.</p>
+            <div class="certificate-footer"><small>Certificate 02 · TESDA</small>
+              <button class="view-btn"
+                    type="button"
+                    data-preview
+                    data-file="certificates/tesda2.pdf"
+                    data-title="Introduction to Computer Systems Servicing">
+              View Certificate ↗
+            </button></div>
+          </article>
+
+          <article class="certificate-card" data-category="TESDA" data-title="Computer System Servicing NC II" data-keywords="installation configuration hardware">
+            <div class="certificate-top">
+            <div class="certificate-icon tesda-icon">
+              <img src="images/tesda-logo.png" alt="TESDA logo">
+            </div>
+            <span class="certificate-category">TESDA</span></div>
+            <h3>Computer System Servicing NC II</h3><p>Maintaining Computer Systems and Networks.</p>
+            <div class="certificate-footer"><small>Certificate 03 · TESDA</small>
+              <button class="view-btn"
+                    type="button"
+                    data-preview
+                    data-file="certificates/tesda3.pdf"
+                    data-title="Maintaining Computer Systems and Networks">
+              View Certificate ↗
+            </button></div>
+          </article>
+          <article class="certificate-card" data-category="TESDA" data-title="Computer System Servicing NC II" data-keywords="networking LAN router switch">
+            <div class="certificate-top">
+            <div class="certificate-icon tesda-icon">
+              <img src="images/tesda-logo.png" alt="TESDA logo">
+            </div>
+            <span class="certificate-category">TESDA</span></div>
+            <h3>Computer System Servicing NC II</h3><p>Setting Up Computer Networks.</p>
+            <div class="certificate-footer"><small>Certificate 04 · TESDA</small>
+              <button class="view-btn"
+                    type="button"
+                    data-preview
+                    data-file="certificates/tesda4.pdf"
+                    data-title="Setting Up Computer Networks">
+              View Certificate ↗
+            </button></div>
+          </article>
+          <article class="certificate-card" data-category="TESDA" data-title="Computer System Servicing NC II" data-keywords="maintenance repair troubleshooting">
+            <div class="certificate-top">
+            <div class="certificate-icon tesda-icon">
+              <img src="images/tesda-logo.png" alt="TESDA logo">
+            </div>
+            <span class="certificate-category">TESDA</span></div>
+            <h3>Computer System Servicing NC II</h3><p>Setting Up Computer Servers.</p>
+            <div class="certificate-footer"><small>Certificate 05 · TESDA</small>
+              <button class="view-btn"
+                    type="button"
+                    data-preview
+                    data-file="certificates/tesda5.pdf"
+                    data-title="Setting Up Computer Servers">
+              View Certificate ↗
+            </button></div>
+          </article>
+
+          <!-- DICT -->
+          <article class="certificate-card" data-category="DICT" data-title="Department of Information and Communications Technology " data-keywords="digital skills computer basics">
+            <div class="certificate-top"><div class="certificate-icon dict-icon">
+              <img src="./images/dict-logo.jpg" alt="DICT logo">
+            </div><span class="certificate-category">DICT</span></div>
+            <h3>Department of Information and Communications Technology</h3><p>Digital Trust in the AI Era: Detecting Deepfakes and Strengthening Cybersecurity.</p>
+            <div class="certificate-footer"><small>Certificate 01 · DICT</small>
+              <button class="view-btn"
+                    type="button"
+                    data-preview
+                    data-file="certificates/dict1.pdf"
+                    data-title="Detecting Deepfakes and Strengthening Cybersecurity">
+              View Certificate ↗
+            </button></div>
+          </article>
+
+          <article class="certificate-card" data-category="DICT" data-title="Department of Information and Communications Technology" data-keywords="cyber security online safety privacy"> 
+          <div class="certificate-top">
+            <div class="certificate-icon dict-icon">
+              <img src="./images/dict-logo.jpg" alt="DICT logo">
+            </div>
+            <span class="certificate-category">DICT</span>
+          </div>
+            <h3>Department of Information and Communications Technology</h3><p>Don't Get Hacked: Detect, Defend, and Secure your Digital Life.</p>
+            <div class="certificate-footer"><small>Certificate 02 · DICT</small>
+              <button class="view-btn"
+                    type="button"
+                    data-preview
+                    data-file="certificates/dict2.pdf"
+                    data-title="Don't Get Hacked: Detect, Defend, and Secure your Digital Life">
+              View Certificate ↗
+            </button></div>
+          </article>
+
+          <article class="certificate-card" data-category="DICT" data-title="Department of Information and Communications Technology" data-keywords="HTML CSS website web design">
+            <div class="certificate-top"><div class="certificate-icon dict-icon">
+              <img src="./images/dict-logo.jpg" alt="DICT logo">
+            </div><span class="certificate-category">DICT</span></div>
+            <h3>Department of Information and Communications Technology</h3><p>ICT Skills Training on Google Workspace.</p>
+            <div class="certificate-footer"><small>Certificate 03 · DICT</small>
+              <button class="view-btn"
+                    type="button"
+                    data-preview
+                    data-file="certificates/dict3.pdf"
+                    data-title="ICT Skills Training on Google Workspace">
+              View Certificate ↗
+            </button></div>
+          </article>
+
+          <article class="certificate-card" data-category="DICT" data-title="Department of Information and Communications Technology" data-keywords="office digital productivity">
+            <div class="certificate-top"><div class="certificate-icon dict-icon">
+              <img src="./images/dict-logo.jpg" alt="DICT logo">
+            </div><span class="certificate-category">DICT</span></div>
+            <h3>Department of Information and Communications Technology</h3><p>Navigating the Future: Introduction to AI and Digital Security.</p>
+            <div class="certificate-footer"><small>Certificate 04 · DICT</small>
+              <button class="view-btn"
+                    type="button"
+                    data-preview
+                    data-file="certificates/dict4.pdf"
+                    data-title="Navigating the Future: Introduction to AI and Digital Security">
+              View Certificate ↗
+            </button></div>
+          </article>
+
+          <article class="certificate-card" data-category="DICT" data-title="Department of Information and Communications Technology" data-keywords="marketing social media online content">
+            <div class="certificate-top"><div class="certificate-icon dict-icon">
+              <img src="./images/dict-logo.jpg" alt="DICT logo">
+            </div><span class="certificate-category">DICT</span></div>
+            <h3>Department of Information and Communications Technology</h3><p>PRESS START: Game Development in Region 8.</p>
+            <div class="certificate-footer"><small>Certificate 05 · DICT</small>
+              <button class="view-btn"
+                    type="button"
+                    data-preview
+                    data-file="certificates/dict5.pdf"
+                    data-title="Being a Hobbyist Game Dev in the Modern Era">
+              View Certificate ↗
+            </button></div>
+          </article>
+
+          <!-- freeCodeCamp -->
+          <article class="certificate-card" data-category="FreeCodeCamp" data-title="Responsive Web Design" data-keywords="freeCodeCamp HTML CSS responsive web">
+            <div class="certificate-top">
+              <div class="certificate-icon freecodecamp-icon">
+              <img src="./images/freecodecamp-logo.jpg"
+                  alt="freeCodeCamp logo">
+            </div><span class="certificate-category">freeCodeCamp</span></div>
+            <h3>Responsive Web Design</h3><p>Foundational C# with Microsoft.</p>
+            <div class="certificate-footer"><small>Certificate 01 · freeCodeCamp</small>
+              <button class="view-btn"
+                    type="button"
+                    data-preview
+                    data-file="certificates/freecodecamp.pdf"
+                    data-title="C# Programming Language">
+              View Certificate ↗
+            </button></div>
+          </article>
+
+          <!-- Cisco Network Academy -->
+          <article class="certificate-card" data-category="Cisco Network Academy" data-title="Cisco Networking Academy" data-keywords="Cisco networking IP LAN routing switching">
+            <div class="certificate-top">
+              <div class="certificate-icon cisco-icon">
+                <img src="./images/cisco-logo.jpg"
+                    alt="Cisco Networking Academy logo">
+              </div><span class="certificate-category">Cisco</span></div>
+            <h3>Cisco Networking Academy</h3><p>Networking Basics.</p>
+            <div class="certificate-footer"><small>Certificate 01 · Cisco</small>
+              <button class="view-btn"
+                    type="button"
+                    data-preview
+                    data-file="certificates/CISCO_NETWORKING_BASICS.pdf"
+                    data-title="Networking Basics">
+              View Certificate ↗
+            </button></div>
+          </article>
+
+          <article class="certificate-card" data-category="Cisco Network Academy" data-title="Networking Basics" data-keywords="Cisco network fundamentals">
+            <div class="certificate-top">
+              <div class="certificate-icon cisco-icon">
+                <img src="./images/cisco-logo.jpg"
+                    alt="Cisco Networking Academy logo">
+              </div><span class="certificate-category">Cisco</span></div>
+            <h3>Cisco Network Academy</h3><p>Computer Hardware Basics.</p>
+            <div class="certificate-footer"><small>Certificate 02 · Cisco</small>
+              <button class="view-btn"
+                    type="button"
+                    data-preview
+                    data-file="certificates/CISCO_COMPUTER_HARDWARE_BASICS.pdf"
+                    data-title="Computer Hardware Basics">
+              View Certificate ↗
+            </button></div>
+          </article>
+
+          <!-- International -->
+          <article class="certificate-card" data-category="International" data-title="Junior Philippine Computer Society" data-keywords="international technology training global">
+            <div class="certificate-top"><div class="certificate-icon">★</div><span class="certificate-category">Local</span></div>
+            <h3>Junior Philippine Computer Society</h3><p>CODE TO SUCCES: Mastering Software Development Life Cycle for is Professionals.</p>
+            <div class="certificate-footer"><small>Certificate 01 · Local</small>
+              <button class="view-btn"
+                    type="button"
+                    data-preview
+                    data-file="certificates/international1.png"
+                    data-title="Computer Hardware Basics">
+              View Certificate ↗
+            </button></div>
+          </article>
+          <article class="certificate-card" data-category="International" data-title="Global Digital Skills Program" data-keywords="international global digital skills">
+            <div class="certificate-top">
+              <div class="certificate-icon">★</div><span class="certificate-category">Local</span></div>
+            <h3>Ethel Programming Computer Programming Services</h3><p>Artificial Intelligence for Digital Transformation.</p>
+            <div class="certificate-footer"><small>Certificate 02 · Local</small>
+              <button class="view-btn"
+                    type="button"
+                    data-preview
+                    data-file="certificates/international2.png"
+                    data-title="Artificial Intelligence for Digital Transformation">
+              View Certificate ↗
+            </button></div>
+          </article>
+          
+          <!-- NC Seminar -->
+          <article class="certificate-card"
+                  data-category="NC Seminar"
+                  data-title="NC Seminar Certificate 01"
+                  data-keywords="NC seminar training information technology">
+
+            <div class="certificate-top">
+              <div class="certificate-icon ncseminar-icon">
+                <div class="certificate-icon nc-icon">
+                  <img src="images/nc-logo.png"
+                      alt="NC logo">
+                </div></div>
+              <span class="certificate-category">Seminar</span>
+            </div>
+
+            <h3>Professional Development With Seminar and Fieldtrip</h3>
+            <p>Agentic AI.</p>
+
+            <div class="certificate-footer">
+              <small>Certificate 01 · Seminar</small>
+              <button class="view-btn"
+                      type="button"
+                      data-preview
+                      data-file="certificates/seminar1.png"
+                      data-title="IT Beyond Horizons: Igniting Innovation, Transforming Tomorrow">
+                View Certificate ↗
+              </button>
+            </div>
+          </article>
+
+          <article class="certificate-card"
+                  data-category="NC Seminar"
+                  data-title="NC Seminar Certificate 02"
+                  data-keywords="NC seminar technology learning">
+
+            <div class="certificate-top">
+              <div class="certificate-icon ncseminar-icon">
+                <div class="certificate-icon nc-icon">
+                  <img src="images/nc-logo.png"
+                      alt="NC logo">
+                </div></div>
+              <span class="certificate-category">Seminar</span>
+            </div>
+
+            <h3>Professional Development With Seminar and Fieldtrip</h3>
+            <p>Integrating Iot in Capstone Project.</p>
+
+            <div class="certificate-footer">
+              <small>Certificate 02 · Seminar</small>
+              <button class="view-btn"
+                      type="button"
+                      data-preview
+                      data-file="certificates/seminar2.png"
+                      data-title="IT Beyond Horizons: Igniting Innovation, Transforming Tomorrow">
+                View Certificate ↗
+              </button>
+            </div>
+          </article>
+
+          <article class="certificate-card"
+                  data-category="NC Seminar"
+                  data-title="NC Seminar Certificate 03"
+                  data-keywords="NC seminar professional development IT">
+
+            <div class="certificate-top">
+              <div class="certificate-icon ncseminar-icon">
+                <div class="certificate-icon nc-icon">
+                  <img src="images/nc-logo.png"
+                      alt="NC logo">
+                </div></div>
+              <span class="certificate-category">Seminar</span>
+            </div>
+
+            <h3>Professional Development With Seminar and Fieldtrip</h3>
+            <p>Programming fundamentals.</p>
+
+            <div class="certificate-footer">
+              <small>Certificate 03 · Seminar</small>
+              <button class="view-btn"
+                      type="button"
+                      data-preview
+                      data-file="certificates/seminar3.png"
+                      data-title="IT Beyond Horizons: Igniting Innovation, Transforming Tomorrow">
+                View Certificate ↗
+              </button>
+            </div>
+          </article>
+
+          <article class="certificate-card"
+                  data-category="NC Seminar"
+                  data-title="NC Seminar Certificate 04"
+                  data-keywords="NC seminar digital skills computer">
+
+            <div class="certificate-top">
+              <div class="certificate-icon ncseminar-icon">
+                <div class="certificate-icon nc-icon">
+                  <img src="images/nc-logo.png"
+                      alt="NC logo">
+                </div></div>
+              <span class="certificate-category">Seminar</span>
+            </div>
+
+            <h3>Professional Development With Seminar and Fieldtrip</h3>
+            <p>Video Editing Tricks and Trips.</p>
+
+            <div class="certificate-footer">
+              <small>Certificate 04 · Seminar</small>
+              <button class="view-btn"
+                      type="button"
+                      data-preview
+                      data-file="certificates/seminar4.png"
+                      data-title="IT Beyond Horizons: Igniting Innovation, Transforming Tomorrow">
+                View Certificate ↗
+              </button>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="empty-state" id="emptyState">
+          <strong>No matching certificates found.</strong>
+          <p>Try another keyword or choose “All providers.”</p>
+        </div>
+
+        <div class="upload-panel">
+          <div><h3>Have more certificates to add?</h3><p>Upload certificate images or PDFs to add them to this page during your current visit.</p></div>
+          <label class="upload-label" for="certificateUpload">＋ Upload certificates</label>
+          <input id="certificateUpload" type="file" accept="image/*,.pdf" multiple>
+        </div>
+        <p class="upload-note">Note: This demo upload is temporary. Uploaded files are not saved to a server and may disappear after refreshing the page. To publish your real certificates permanently, add the files to your website folder and link them in the code.</p>
+      </div>
+    </section>
+
+
+
+
+
+
+    
+<!-- Resume and Professional Development Documents -->
+<section class="resume-section" id="resume">
+  <div class="container">
+
+    <div class="resume-header">
+      <p class="section-kicker">Professional Development</p>
+      <h2 class="section-title">
+        My Career <span class="gradient-text">Documents</span>
+      </h2>
+      <p class="section-description">
+        A collection of my professional documents, showcasing my
+        qualifications, career preparation, and understanding of
+        professional communication.
+      </p>
+    </div>
+
+    <!-- Job Application Documents -->
+    <div class="resume-subheading">
+      <h3>Job Application Documents</h3>
+      <p>Documents for presenting my qualifications and applying for a position.</p>
+    </div>
+
+    <div class="resume-grid">
+
+      <!-- 01 Application Letter -->
+      <article class="resume-card">
+        <div class="resume-icon">✉</div>
+        <span class="resume-label">Document 01</span>
+        <h3>Application Letter</h3>
+        <p>
+          A formal application letter addressed to ProfDev Inc.,
+          expressing my interest in a position and willingness
+          to apply my knowledge in a professional environment.
+        </p>
+        <a href="documents/application-letter.pdf"
+           class="btn btn-primary resume-btn"
+           target="_blank"
+           rel="noopener noreferrer">
+          View Letter ↗
+        </a>
+      </article>
+
+      <!-- 02 Traditional Resume -->
+      <article class="resume-card">
+        <div class="resume-icon">📄</div>
+        <span class="resume-label">Document 02</span>
+        <h3>Traditional Resume</h3>
+        <p>
+          A conventional resume highlighting my educational
+          background, technical skills, experience, and qualifications.
+        </p>
+        <a href="documents/traditional-resume.pdf"
+           class="btn btn-primary resume-btn"
+           target="_blank"
+           rel="noopener noreferrer">
+          View Resume ↗
+        </a>
+      </article>
+
+      <!-- 03 ATS-Friendly Resume -->
+      <article class="resume-card">
+        <div class="resume-icon">💻</div>
+        <span class="resume-label">Document 03</span>
+        <h3>ATS-Friendly Resume</h3>
+        <p>
+          A resume with a clean layout, standard headings, and
+          relevant keywords designed to be easier for Applicant
+          Tracking Systems to process.
+        </p>
+        <a href="documents/ats-friendly-resume.pdf"
+           class="btn btn-primary resume-btn"
+           target="_blank"
+           rel="noopener noreferrer">
+          View Resume ↗
+        </a>
+      </article>
+
+    </div>
+
+    <!-- Employment Correspondence -->
+    <div class="resume-subheading resignation-heading">
+      <h3>Employment Correspondence</h3>
+      <p>A formal document demonstrating professional workplace communication.</p>
+    </div>
+
+    <div class="resume-grid resignation-grid">
+
+      <!-- 04 Resignation Letter -->
+      <article class="resume-card">
+        <div class="resume-icon">📝</div>
+        <span class="resume-label">Document 04</span>
+        <h3>Resignation Letter</h3>
+        <p>
+          A formal resignation letter stating the intention to resign,
+          the effective resignation date, and appreciation for the
+          employment opportunity.
+        </p>
+        <a href="documents/resignation-letter.pdf"
+           class="btn btn-primary resume-btn"
+           target="_blank"
+           rel="noopener noreferrer">
+          View Letter ↗
+        </a>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="contact-heading">
+          <p class="section-kicker">Let's connect</p>
+          <h2 class="section-title">Get in <span class="gradient-text">touch</span></h2>
+          <p class="section-description">Have a question, project idea, or opportunity? Feel free to contact me through any of these platforms.</p>
+        </div>
+        <div class="contact-grid">
+          <a class="contact-card" href="https://www.instagram.com/oiizyszxx/" target="_blank" rel="noopener noreferrer">
+            <span class="contact-icon instagram-icon" aria-hidden="true">◎</span>
+            <span class="contact-info"><strong>Instagram</strong><span>oiizyszxx</span></span>
+            <span class="contact-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="contact-card" href="https://www.facebook.com/Lizzyco.breaker" target="_blank" rel="noopener noreferrer">
+            <span class="contact-icon facebook-icon" aria-hidden="true">f</span>
+            <span class="contact-info"><strong>Facebook</strong><span>Liz Antonette I. Wayco</span></span>
+            <span class="contact-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="contact-card" href="mailto:your.email@example.com">
+            <span class="contact-icon email-icon" aria-hidden="true">✉</span>
+            <span class="contact-info"><strong>Email</strong><span>lizzywayco@gmail.com</span></span>
+            <span class="contact-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="contact-card" href="tel:+639XXXXXXXXX">
+            <span class="contact-icon phone-icon" aria-hidden="true">☎</span>
+            <span class="contact-info"><strong>Phone number</strong><span>+63 967 149 3056</span></span>
+            <span class="contact-arrow" aria-hidden="true">↗</span>
+          </a>
+        </div>
+       
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <span class="footer-brand">Lizzy · Portfolio</span>
+      <p>Wayco · <span id="year"></span></p>
+      <a href="#home">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <div class="modal" id="previewModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-box">
+      <div class="modal-head"><h3 id="modalTitle">Certificate details</h3><button class="close-modal" id="closeModal" aria-label="Close preview">✕</button></div>
+      <div class="preview-area" id="previewArea"></div>
+    </div>
+  </div>
+  <script src="/script.js"></script>
+</body>
+</html>
